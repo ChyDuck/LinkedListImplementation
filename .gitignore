@@ -1,0 +1,8 @@
+.idea/workspace.xml
+.idea/uiDesigner.xml
+.idea/gradle.xml
+.idea/libraries
+*.jar
+.gradle/
+.idea/
+build/
