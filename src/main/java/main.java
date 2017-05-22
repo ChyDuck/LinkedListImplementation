@@ -7,25 +7,39 @@ public class main {
 
         LinkedListImpl linkedList = new LinkedListImpl();
 
-        Random random = new Random(100);
+        Random random = new Random();
 
-        int length = random.nextInt();
+        int from = 10;
+        int to = 20;
+
+        int differenceBothRange = to - from;
+
+        int length = random.nextInt(differenceBothRange) + from;
+
+        int value;
 
         //Append an element into the LinkedList
         for (int i = 1; i < length; i++){
-            linkedList.add(i);
+
+            value = random.nextInt(to);
+
+            linkedList.add(value);
         }
 
         System.out.println("All items\n");
-
         linkedList.printAllItems();
 
+        System.out.println("");
         System.out.println("Remove the tail element from a LinkedList\n");
-
         linkedList.removeTail();
 
+        System.out.println("");
         System.out.println("Remove all element in the LinkedList that is great than a target value\n");
 
-        linkedList.removeGreaterThanValue(random.nextInt());
+        int targetValue = random.nextInt(from);
+
+        System.out.println("targetValue: " + targetValue + "\n");
+
+        linkedList.removeGreaterThanValue(targetValue);
     }
 }
